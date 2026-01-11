@@ -10,7 +10,8 @@ public sealed class User : Entity
         Guid id,
         FirstName firstName,
         LastName lastName,
-        Email email) : base(id)
+        Email email)
+        : base(id)
     {
         FirstName = firstName;
         LastName = lastName;

@@ -14,7 +14,8 @@ public sealed class Apartment : Entity
         Address address,
         Money price,
         Money cleaningFee,
-        List<Amenity> amenities) : base(id)
+        List<Amenity> amenities)
+        : base(id)
     {
         Name = name;
         Description = description;

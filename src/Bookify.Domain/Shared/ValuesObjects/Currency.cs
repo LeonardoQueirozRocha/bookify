@@ -8,8 +8,10 @@ public record Currency
     public static readonly Currency Brl = new("BRL");
     public static readonly IReadOnlyCollection<Currency> All = [Usd, Eur, Brl];
 
-    private Currency(string code) => 
+    private Currency(string code)
+    {
         Code = code;
+    }
 
     public string Code { get; init; }
 
