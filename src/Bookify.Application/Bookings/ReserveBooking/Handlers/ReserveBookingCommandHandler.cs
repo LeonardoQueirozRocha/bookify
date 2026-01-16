@@ -1,5 +1,6 @@
 using Bookify.Application.Abstractions.Clock;
 using Bookify.Application.Abstractions.Messaging.Commands;
+using Bookify.Application.Bookings.ReserveBooking.Commands;
 using Bookify.Domain.Abstractions;
 using Bookify.Domain.Abstractions.Interfaces;
 using Bookify.Domain.Apartments.Errors;
@@ -12,7 +13,7 @@ using Bookify.Domain.Bookings.ValuesObjects;
 using Bookify.Domain.Users.Errors;
 using Bookify.Domain.Users.Interfaces;
 
-namespace Bookify.Application.Bookings.ReserveBooking;
+namespace Bookify.Application.Bookings.ReserveBooking.Handlers;
 
 internal sealed class ReserveBookingCommandHandler(
     IUserRepository userRepository,
