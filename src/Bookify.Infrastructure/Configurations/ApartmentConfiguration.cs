@@ -28,12 +28,16 @@ internal sealed class ApartmentConfiguration : IEntityTypeConfiguration<Apartmen
 
         builder.OwnsOne(
             apartment => apartment.Price,
-            priceBuilder => priceBuilder.Property(money => money.Currency)
+            priceBuilder => priceBuilder
+                .Property(money => money.Currency)
                 .HasConversion(currency => currency.Code, code => Currency.FromCode(code)));
 
         builder.OwnsOne(
             apartment => apartment.CleaningFee,
-            priceBuilder => priceBuilder.Property(money => money.Currency)
+            priceBuilder => priceBuilder
+                .Property(money => money.Currency)
                 .HasConversion(currency => currency.Code, code => Currency.FromCode(code)));
+
+        builder.Property<uint>("Version").IsRowVersion();
     }
 }
