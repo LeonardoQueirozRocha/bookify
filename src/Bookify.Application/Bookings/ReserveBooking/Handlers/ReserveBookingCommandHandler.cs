@@ -1,8 +1,10 @@
 using Bookify.Application.Abstractions.Clock;
 using Bookify.Application.Abstractions.Messaging.Commands;
 using Bookify.Application.Bookings.ReserveBooking.Commands;
+using Bookify.Application.Exceptions;
 using Bookify.Domain.Abstractions;
 using Bookify.Domain.Abstractions.Interfaces;
+using Bookify.Domain.Apartments.Entities;
 using Bookify.Domain.Apartments.Errors;
 using Bookify.Domain.Apartments.Interfaces;
 using Bookify.Domain.Bookings.Entities;
@@ -47,15 +49,39 @@ internal sealed class ReserveBookingCommandHandler(
             return Result.Failure<Guid>(BookingErrors.Overlap);
         }
 
-        var booking = Booking.Reserve(
+        return await ReserveBookingAsync(
             apartment,
             user.Id,
             duration,
-            dateTimeProvider.UtcNow,
-            pricingService);
-
-        await unitOfWork.SaveChangesAsync(cancellationToken);
-
-        return booking.Id;
+            cancellationToken);
     }
+
+    #region Private methods
+
+    private async Task<Result<Guid>> ReserveBookingAsync(
+        Apartment apartment,
+        Guid userId,
+        DateRange duration,
+        CancellationToken cancellationToken)
+    {
+        try
+        {
+            var booking = Booking.Reserve(
+                apartment,
+                userId,
+                duration,
+                dateTimeProvider.UtcNow,
+                pricingService);
+
+            await unitOfWork.SaveChangesAsync(cancellationToken);
+
+            return booking.Id;
+        }
+        catch (ConcurrencyException)
+        {
+            return Result.Failure<Guid>(BookingErrors.Overlap);
+        }
+    }
+
+    #endregion
 }
