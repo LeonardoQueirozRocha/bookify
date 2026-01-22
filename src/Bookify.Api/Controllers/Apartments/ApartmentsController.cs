@@ -9,7 +9,7 @@ namespace Bookify.Api.Controllers.Apartments;
 public class ApartmentsController(ISender sender) : ControllerBase
 {
     [HttpGet]
-    public async Task<ActionResult<IActionResult>> SearchApartmentsAsync(
+    public async Task<IActionResult> SearchApartmentsAsync(
         DateOnly startDate,
         DateOnly endDate,
         CancellationToken cancellationToken)
