@@ -21,6 +21,8 @@ if (app.Environment.IsDevelopment())
     // app.SeedData();
 }
 
+app.UseCustomExceptionHandler();
+
 app.UseHttpsRedirection();
 
 app.MapControllers();
