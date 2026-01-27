@@ -12,11 +12,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookify.Infrastructure", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookify.Api", "src\Bookify.Api\Bookify.Api.csproj", "{2D290863-3E82-4D76-989F-F67068076119}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A90E9A1D-FB73-4DF6-9E03-0B52C741EA7A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "items", "items", "{A90E9A1D-FB73-4DF6-9E03-0B52C741EA7A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infra", "infra", "{F76405A8-A393-419C-BAA4-9078C5BCFC8E}"
 	ProjectSection(SolutionItems) = preProject
 		infra\compose.yaml = infra\compose.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "imports", "imports", "{4F5D64E4-69D9-4399-8645-A54BE4DED90C}"
+	ProjectSection(SolutionItems) = preProject
+		infra\imports\bookify-realm-export.json = infra\imports\bookify-realm-export.json
 	EndProjectSection
 EndProject
 Global
@@ -30,6 +35,7 @@ Global
 		{AF1AC7B5-5D0B-4844-806B-EBAD3D11A3A5} = {88A77691-BA30-4559-81D3-E74C08E93F9C}
 		{2D290863-3E82-4D76-989F-F67068076119} = {88A77691-BA30-4559-81D3-E74C08E93F9C}
 		{F76405A8-A393-419C-BAA4-9078C5BCFC8E} = {A90E9A1D-FB73-4DF6-9E03-0B52C741EA7A}
+		{4F5D64E4-69D9-4399-8645-A54BE4DED90C} = {F76405A8-A393-419C-BAA4-9078C5BCFC8E}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{31291CD9-C19C-4A4A-8E71-B7276FD6F196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
