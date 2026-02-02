@@ -21,9 +21,13 @@ if (app.Environment.IsDevelopment())
     // app.SeedData();
 }
 
+app.UseHttpsRedirection();
+
 app.UseCustomExceptionHandler();
 
-app.UseHttpsRedirection();
+app.UseAuthentication();
+
+app.UseAuthorization();
 
 app.MapControllers();
 
