@@ -27,7 +27,7 @@ public static class DependencyInjection
         services.AddTransient<IDateTimeProvider, DateTimeProvider>();
         services.AddTransient<IEmailService, EmailService>();
         services.AddPersistenceConfiguration(configuration);
-        services.AddOAuth2Configuration(configuration);
+        services.AddAuthentication(configuration);
         
         return services;
     }

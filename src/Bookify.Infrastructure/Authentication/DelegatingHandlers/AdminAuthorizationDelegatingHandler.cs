@@ -1,10 +1,11 @@
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using Bookify.Infrastructure.Authentication.Models;
+using Bookify.Infrastructure.Authentication.Options;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 
-namespace Bookify.Infrastructure.Authentication;
+namespace Bookify.Infrastructure.Authentication.DelegatingHandlers;
 
 public sealed class AdminAuthorizationDelegatingHandler(
     IOptions<KeycloakOptions> keycloakOptions)

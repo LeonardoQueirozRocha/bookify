@@ -1,4 +1,4 @@
-namespace Bookify.Api.Controllers.Users;
+namespace Bookify.Api.Controllers.Users.Requests;
 
 public sealed record RegisterUserRequest(
     string Email,

@@ -1,4 +1,4 @@
-namespace Bookify.Infrastructure.Authentication;
+namespace Bookify.Infrastructure.Authentication.Options;
 
 public sealed class KeycloakOptions
 {

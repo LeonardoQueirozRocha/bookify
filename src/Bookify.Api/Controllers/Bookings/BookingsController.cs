@@ -1,3 +1,4 @@
+using Bookify.Api.Controllers.Bookings.Requests;
 using Bookify.Application.Bookings.GetBooking.Queries;
 using Bookify.Application.Bookings.ReserveBooking.Commands;
 using MediatR;

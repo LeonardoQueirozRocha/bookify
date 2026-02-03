@@ -3,7 +3,7 @@ using Bookify.Application.Abstractions.Authentication;
 using Bookify.Domain.Users.Entities;
 using Bookify.Infrastructure.Authentication.Models;
 
-namespace Bookify.Infrastructure.Authentication;
+namespace Bookify.Infrastructure.Authentication.Services;
 
 internal sealed class AuthenticationService(
     HttpClient httpClient)
