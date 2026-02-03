@@ -13,7 +13,7 @@ public class UserController(
     ISender sender)
     : ControllerBase
 {
-    [AllowCookieRedirect]
+    [AllowAnonymous]
     [HttpPost("register")]
     public async Task<IActionResult> RegisterAsync(
         RegisterUserRequest request,
