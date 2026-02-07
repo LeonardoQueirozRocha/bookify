@@ -10,7 +10,7 @@ namespace Bookify.Api.Controllers.Users;
 
 [ApiController]
 [Route("api/users")]
-public class UserController(ISender sender) : ControllerBase
+public class UsersController(ISender sender) : ControllerBase
 {
     [HttpGet("me")]
     public async Task<IActionResult> GetLoggedInUser(CancellationToken cancellationToken)
