@@ -13,6 +13,7 @@ namespace Bookify.Api.Controllers.Users;
 public class UsersController(ISender sender) : ControllerBase
 {
     [HttpGet("me")]
+    [Authorize(Roles = Roles.Registered)]
     public async Task<IActionResult> GetLoggedInUser(CancellationToken cancellationToken)
     {
         var query = new GetLoggedInUserQuery();
