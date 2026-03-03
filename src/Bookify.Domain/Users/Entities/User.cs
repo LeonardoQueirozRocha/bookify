@@ -1,3 +1,4 @@
+using System.Reflection.Metadata.Ecma335;
 using Bookify.Domain.Abstractions;
 using Bookify.Domain.Users.Events;
 using Bookify.Domain.Users.ValuesObjects;
@@ -6,6 +7,8 @@ namespace Bookify.Domain.Users.Entities;
 
 public sealed class User : Entity
 {
+    private readonly List<Role> _roles = [];
+
     private User()
     {
     }
@@ -30,6 +33,8 @@ public sealed class User : Entity
 
     public string IdentityId { get; private set; } = string.Empty;
 
+    public IReadOnlyCollection<Role> Roles => _roles.ToList();
+
     public static User Create(
         FirstName firstName,
         LastName lastName,
@@ -38,6 +43,8 @@ public sealed class User : Entity
         var user = new User(Guid.NewGuid(), firstName, lastName, email);
 
         user.RaiseDomainEvent(new UserCreatedDomainEvent(user.Id));
+
+        user._roles.Add(Role.Registered);
 
         return user;
     }

@@ -28,6 +28,7 @@ public static class DependencyInjection
         services.AddTransient<IEmailService, EmailService>();
         services.AddPersistenceConfiguration(configuration);
         services.AddAuthentication(configuration);
+        services.AddAuthorization();
         
         return services;
     }

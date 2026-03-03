@@ -1,4 +1,5 @@
 using Bookify.Application.Abstractions.Authentication;
+using Bookify.Infrastructure.Authentication.Context;
 using Bookify.Infrastructure.Authentication.DelegatingHandlers;
 using Bookify.Infrastructure.Authentication.Options;
 using Bookify.Infrastructure.Authentication.Services;
@@ -34,5 +35,9 @@ internal static class AuthenticationExtensions
         services.AddHttpClient<IJwtService, JwtService>((serviceProvider, httpClient) =>
             httpClient.BaseAddress = new Uri(
                 serviceProvider.GetRequiredService<IOptions<KeycloakOptions>>().Value.TokenUrl));
+
+        services.AddHttpContextAccessor();
+
+        services.AddScoped<IUserContext, UserContext>();
     }
 }

@@ -19,13 +19,10 @@ internal sealed class RegisterUserCommandHandler(
         RegisterUserCommand request,
         CancellationToken cancellationToken)
     {
-        var firstName = new FirstName(request.FirstName);
-        var lastName = new LastName(request.LastName);
-        var email = new Email(request.Email);
         var user = User.Create(
-            firstName,
-            lastName,
-            email);
+            new FirstName(request.FirstName),
+            new LastName(request.LastName),
+            new Email(request.Email));
 
         var identityId = await authenticationService.RegisterAsync(
             user,
