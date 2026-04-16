@@ -19,6 +19,7 @@ public static class DependencyInjection
         services.AddAuthentication(configuration);
         services.AddAuthorization();
         services.AddCaching(configuration);
+        services.AddCustomHealthChecks(configuration);
 
         return services;
     }
