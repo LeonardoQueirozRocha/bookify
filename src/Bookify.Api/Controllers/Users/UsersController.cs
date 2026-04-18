@@ -1,7 +1,9 @@
-using Bookify.Api.Controllers.Users.Requests;
+using Asp.Versioning;
 using Bookify.Application.Users.GetLoggedInUser.Queries;
 using Bookify.Application.Users.LogInUser.Commands;
+using Bookify.Application.Users.LogInUser.Requests;
 using Bookify.Application.Users.RegisterUser.Commands;
+using Bookify.Application.Users.RegisterUser.Requests;
 using Bookify.Infrastructure.Authorization;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -10,7 +12,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace Bookify.Api.Controllers.Users;
 
 [ApiController]
-[Route("api/users")]
+[ApiVersion(ApiVersions.V1)]
+[Route("api/v{version:apiVersion}/users")]
 public class UsersController(ISender sender) : ControllerBase
 {
     [HttpGet("me")]
