@@ -1,7 +1,7 @@
 using Asp.Versioning;
-using Bookify.Api.Controllers.Bookings.Requests;
 using Bookify.Application.Bookings.GetBooking.Queries;
 using Bookify.Application.Bookings.ReserveBooking.Commands;
+using Bookify.Application.Bookings.ReserveBooking.Requests;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

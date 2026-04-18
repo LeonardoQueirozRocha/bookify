@@ -1,8 +1,9 @@
 using Asp.Versioning;
-using Bookify.Api.Controllers.Users.Requests;
 using Bookify.Application.Users.GetLoggedInUser.Queries;
 using Bookify.Application.Users.LogInUser.Commands;
+using Bookify.Application.Users.LogInUser.Requests;
 using Bookify.Application.Users.RegisterUser.Commands;
+using Bookify.Application.Users.RegisterUser.Requests;
 using Bookify.Infrastructure.Authorization;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
