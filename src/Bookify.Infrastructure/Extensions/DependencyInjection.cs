@@ -20,6 +20,7 @@ public static class DependencyInjection
         services.AddAuthorization();
         services.AddCaching(configuration);
         services.AddCustomHealthChecks(configuration);
+        services.AddApiVersioningConfiguration();
 
         return services;
     }

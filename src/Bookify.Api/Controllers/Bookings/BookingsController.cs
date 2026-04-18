@@ -1,3 +1,4 @@
+using Asp.Versioning;
 using Bookify.Api.Controllers.Bookings.Requests;
 using Bookify.Application.Bookings.GetBooking.Queries;
 using Bookify.Application.Bookings.ReserveBooking.Commands;
@@ -8,8 +9,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace Bookify.Api.Controllers.Bookings;
 
 [Authorize]
-[ApiController]
-[Route("api/bookings")]
+[ApiVersion(ApiVersions.V1)]
+[Route("api/v{version:apiVersion}/bookings")]
 public class BookingsController(ISender sender) : ControllerBase
 {
     [HttpGet("{id:guid}")]
