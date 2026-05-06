@@ -21,6 +21,7 @@ public static class DependencyInjection
         services.AddCaching(configuration);
         services.AddCustomHealthChecks(configuration);
         services.AddApiVersioningConfiguration();
+        services.AddBackgroundJobs(configuration);
 
         return services;
     }

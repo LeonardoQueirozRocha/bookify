@@ -13,6 +13,6 @@ internal abstract class Repository<T>(
     public async Task<T?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default) =>
         await DbContext.Set<T>().FirstOrDefaultAsync(entity => entity.Id == id, cancellationToken);
 
-    public virtual void Add(T user) =>
-        DbContext.Add(user);
+    public virtual void Add(T entity) =>
+        DbContext.Add(entity);
 }
