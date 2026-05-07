@@ -72,13 +72,15 @@ internal sealed class ReserveBookingCommandHandler(
                 duration,
                 dateTimeProvider.UtcNow,
                 pricingService);
+            
+            bookingRepository.Add(booking);
 
             await unitOfWork.SaveChangesAsync(cancellationToken);
 
             return booking.Id;
         }
         catch (ConcurrencyException)
-        {
+        { 
             return Result.Failure<Guid>(BookingErrors.Overlap);
         }
     }

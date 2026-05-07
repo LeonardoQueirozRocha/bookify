@@ -1,6 +1,7 @@
-using Bookify.Api.Controllers.Bookings.Requests;
+using Asp.Versioning;
 using Bookify.Application.Bookings.GetBooking.Queries;
 using Bookify.Application.Bookings.ReserveBooking.Commands;
+using Bookify.Application.Bookings.ReserveBooking.Requests;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -9,11 +10,12 @@ namespace Bookify.Api.Controllers.Bookings;
 
 [Authorize]
 [ApiController]
-[Route("api/bookings")]
+[ApiVersion(ApiVersions.V1)]
+[Route("api/v{version:apiVersion}/bookings")]
 public class BookingsController(ISender sender) : ControllerBase
 {
     [HttpGet("{id:guid}")]
-    public async Task<IActionResult> GetBookingAsync(Guid id, CancellationToken cancellationToken)
+    public async Task<IActionResult> GetBooking(Guid id, CancellationToken cancellationToken)
     {
         var query = new GetBookingQuery(id);
 
@@ -23,7 +25,7 @@ public class BookingsController(ISender sender) : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> ReserveBookingAsync(
+    public async Task<IActionResult> ReserveBooking(
         ReserveBookingRequest request,
         CancellationToken cancellationToken)
     {
@@ -39,7 +41,7 @@ public class BookingsController(ISender sender) : ControllerBase
         {
             return BadRequest(result.Error);
         }
-
-        return CreatedAtAction(nameof(GetBookingAsync), new { id = result.Value }, result.Value);
+        
+        return CreatedAtAction(nameof(GetBooking), new { id = result.Value }, result.Value);
     }
 }
