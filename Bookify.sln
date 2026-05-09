@@ -24,6 +24,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "imports", "imports", "{4F5D
 		infra\imports\bookify-realm-export.json = infra\imports\bookify-realm-export.json
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookify.Domain.UnitTests", "test\Bookify.Domain.UnitTests\Bookify.Domain.UnitTests.csproj", "{428C127A-6ABB-4CFB-A172-C5E5851ACBBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,7 @@ Global
 		{2D290863-3E82-4D76-989F-F67068076119} = {88A77691-BA30-4559-81D3-E74C08E93F9C}
 		{F76405A8-A393-419C-BAA4-9078C5BCFC8E} = {A90E9A1D-FB73-4DF6-9E03-0B52C741EA7A}
 		{4F5D64E4-69D9-4399-8645-A54BE4DED90C} = {F76405A8-A393-419C-BAA4-9078C5BCFC8E}
+		{428C127A-6ABB-4CFB-A172-C5E5851ACBBE} = {520C1FF1-95D5-4E7D-AA90-7815A4EBA952}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{31291CD9-C19C-4A4A-8E71-B7276FD6F196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -54,5 +57,9 @@ Global
 		{2D290863-3E82-4D76-989F-F67068076119}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D290863-3E82-4D76-989F-F67068076119}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D290863-3E82-4D76-989F-F67068076119}.Release|Any CPU.Build.0 = Release|Any CPU
+		{428C127A-6ABB-4CFB-A172-C5E5851ACBBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{428C127A-6ABB-4CFB-A172-C5E5851ACBBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{428C127A-6ABB-4CFB-A172-C5E5851ACBBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{428C127A-6ABB-4CFB-A172-C5E5851ACBBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
