@@ -25,10 +25,10 @@ internal sealed class GetBookingQueryHandler(
                 apartment_id AS ApartmentId,
                 user_id AS UserId,
                 status AS Status,
-                price_for_period AS PriceAmount,
+                price_for_period_amount AS PriceAmount,
                 price_for_period_currency AS PriceCurrency,
                 cleaning_fee_amount AS CleaningFeeAmount,
-                cleaning_fee_currency AS CleaningFeeCurrency
+                cleaning_fee_currency AS CleaningFeeCurrency,
                 amenities_up_charge_amount AS AmenitiesUpChargeAmount,
                 amenities_up_charge_currency AS AmenitiesUpChargeCurrency,
                 total_price_amount AS TotalPriceAmount,
