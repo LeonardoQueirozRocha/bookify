@@ -34,9 +34,9 @@ if (app.Environment.IsDevelopment())
             options.SwaggerEndpoint(url, name);
         }
     });
-    
+
     app.ApplyMigrations();
-    // app.SeedData();
+    app.SeedData();
 }
 
 app.UseHttpsRedirection();
@@ -56,3 +56,5 @@ app.MapControllers();
 app.MapCustomHealthChecks();
 
 app.Run();
+
+public partial class Program;

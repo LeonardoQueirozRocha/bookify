@@ -10,7 +10,8 @@ public sealed class CustomClaimsTransformation(IServiceProvider serviceProvider)
 {
     public async Task<ClaimsPrincipal> TransformAsync(ClaimsPrincipal principal)
     {
-        if (principal.HasClaim(claim => claim.Type is ClaimTypes.Role) &&
+        if (principal.Identity is not { IsAuthenticated: true } ||
+            principal.HasClaim(claim => claim.Type is ClaimTypes.Role) &&
             principal.HasClaim(claim => claim.Type is JwtRegisteredClaimNames.Sub))
         {
             return principal;

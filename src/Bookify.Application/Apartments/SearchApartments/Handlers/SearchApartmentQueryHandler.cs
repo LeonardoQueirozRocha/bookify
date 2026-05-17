@@ -8,7 +8,7 @@ using Dapper;
 
 namespace Bookify.Application.Apartments.SearchApartments.Handlers;
 
-public class SearchApartmentQueryHandler(
+internal class SearchApartmentQueryHandler(
     ISqlConnectionFactory sqlConnectionFactory)
     : IQueryHandler<SearchApartmentsQuery, IReadOnlyList<ApartmentResponse>>
 {

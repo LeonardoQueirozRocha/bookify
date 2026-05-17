@@ -24,6 +24,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "imports", "imports", "{4F5D
 		infra\imports\bookify-realm-export.json = infra\imports\bookify-realm-export.json
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookify.Domain.UnitTests", "test\Bookify.Domain.UnitTests\Bookify.Domain.UnitTests.csproj", "{428C127A-6ABB-4CFB-A172-C5E5851ACBBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookify.Application.UnitTests", "test\Bookify.Application.UnitTests\Bookify.Application.UnitTests.csproj", "{A9452D53-F942-496D-A0FB-F509D3CEF241}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookify.Application.IntegrationTests", "test\Bookify.Application.IntegrationTests\Bookify.Application.IntegrationTests.csproj", "{1170F4AA-4352-47A3-97AC-89427E41F0E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookify.Api.FunctionalTests", "test\Bookify.Api.FunctionalTests\Bookify.Api.FunctionalTests.csproj", "{DEE9EF34-04A3-4637-B712-FD143B40F6E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookify.ArchitectureTests", "test\Bookify.ArchitectureTests\Bookify.ArchitectureTests.csproj", "{D0BBD8D2-7919-4121-9238-C37689E89D7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +46,11 @@ Global
 		{2D290863-3E82-4D76-989F-F67068076119} = {88A77691-BA30-4559-81D3-E74C08E93F9C}
 		{F76405A8-A393-419C-BAA4-9078C5BCFC8E} = {A90E9A1D-FB73-4DF6-9E03-0B52C741EA7A}
 		{4F5D64E4-69D9-4399-8645-A54BE4DED90C} = {F76405A8-A393-419C-BAA4-9078C5BCFC8E}
+		{428C127A-6ABB-4CFB-A172-C5E5851ACBBE} = {520C1FF1-95D5-4E7D-AA90-7815A4EBA952}
+		{A9452D53-F942-496D-A0FB-F509D3CEF241} = {520C1FF1-95D5-4E7D-AA90-7815A4EBA952}
+		{1170F4AA-4352-47A3-97AC-89427E41F0E2} = {520C1FF1-95D5-4E7D-AA90-7815A4EBA952}
+		{DEE9EF34-04A3-4637-B712-FD143B40F6E0} = {520C1FF1-95D5-4E7D-AA90-7815A4EBA952}
+		{D0BBD8D2-7919-4121-9238-C37689E89D7B} = {520C1FF1-95D5-4E7D-AA90-7815A4EBA952}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{31291CD9-C19C-4A4A-8E71-B7276FD6F196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -54,5 +69,25 @@ Global
 		{2D290863-3E82-4D76-989F-F67068076119}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D290863-3E82-4D76-989F-F67068076119}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D290863-3E82-4D76-989F-F67068076119}.Release|Any CPU.Build.0 = Release|Any CPU
+		{428C127A-6ABB-4CFB-A172-C5E5851ACBBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{428C127A-6ABB-4CFB-A172-C5E5851ACBBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{428C127A-6ABB-4CFB-A172-C5E5851ACBBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{428C127A-6ABB-4CFB-A172-C5E5851ACBBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9452D53-F942-496D-A0FB-F509D3CEF241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9452D53-F942-496D-A0FB-F509D3CEF241}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9452D53-F942-496D-A0FB-F509D3CEF241}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9452D53-F942-496D-A0FB-F509D3CEF241}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1170F4AA-4352-47A3-97AC-89427E41F0E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1170F4AA-4352-47A3-97AC-89427E41F0E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1170F4AA-4352-47A3-97AC-89427E41F0E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1170F4AA-4352-47A3-97AC-89427E41F0E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEE9EF34-04A3-4637-B712-FD143B40F6E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEE9EF34-04A3-4637-B712-FD143B40F6E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEE9EF34-04A3-4637-B712-FD143B40F6E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEE9EF34-04A3-4637-B712-FD143B40F6E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0BBD8D2-7919-4121-9238-C37689E89D7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0BBD8D2-7919-4121-9238-C37689E89D7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0BBD8D2-7919-4121-9238-C37689E89D7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0BBD8D2-7919-4121-9238-C37689E89D7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
