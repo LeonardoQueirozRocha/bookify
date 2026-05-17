@@ -8,7 +8,7 @@ using Bookify.Domain.Bookings.Interfaces;
 
 namespace Bookify.Application.Bookings.ConfirmBooking.Handlers;
 
-public sealed class ConfirmBookingCommandHandler(
+internal sealed class ConfirmBookingCommandHandler(
     IDateTimeProvider dateTimeProvider,
     IBookingRepository bookingRepository,
     IUnitOfWork unitOfWork)
